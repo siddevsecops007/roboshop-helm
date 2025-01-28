@@ -10,4 +10,4 @@ env:
   PAYMENT_HOST:payment
   PAYMENT_PORT:"8080"
 
-app-name: frontend
+appname: frontend
