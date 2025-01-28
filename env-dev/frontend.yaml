@@ -9,3 +9,5 @@ env:
   SHIPPING_PORT:"8080"
   PAYMENT_HOST:payment
   PAYMENT_PORT:"8080"
+
+app-name: frontend
