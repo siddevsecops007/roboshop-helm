@@ -15,13 +15,13 @@ spec:
         app: {{ .Values.appname }}
     spec:
       containers:
-        - name: frontend
+        - name: {{ .Values.appname }}
           image: public.ecr.aws/w8x4g9h7/roboshop-v3/{{ .Values.appname }}
           ports:
             - containerPort: 80
           env:
           {{- range $key, $val := .Values.env }}
             - name: {{ $key }}
-            - value: {{ $val }}
+              value: {{ $val }}
           {{- end }}
 
