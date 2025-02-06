@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: {{ .Values.appName }}
   labels:
-    {{- include "mychart.labels" . | indent 4 }}
+    {{- include "common.labels" . | indent 4 }}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      {{- include "mychart.labels" . | indent 6 }}
+      {{- include "common.labels" . | indent 6 }}
   template:
     metadata:
       labels:
-        {{- include "mychart.labels" . | indent 4 }}
+        {{- include "common.labels" . | indent 4 }}
     spec:
       containers:
         - name: {{ .Values.appName }}
