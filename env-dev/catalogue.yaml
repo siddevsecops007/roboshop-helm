@@ -7,3 +7,14 @@ service:
   containerPort: 8080
   type: ClusterIP
   servicePort: 8080
+
+schema:
+  enabled: true
+  dbExtension: js
+  env:
+    DB_TYPE: mongo
+    APP_GIT_URL: https://github.com/roboshop-devops-project-v3/catalogue
+    DB_HOST: mongodb-dev.siddevsecops.icu
+  containers:
+    - master-data
+
