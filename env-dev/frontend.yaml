@@ -15,3 +15,7 @@ service:
   containerPort: 80
   type: LoadBalancer
   servicePort: 80
+
+ingress:
+  enabled: true
+  hostName: frontend-dev.siddevsecops.icu
